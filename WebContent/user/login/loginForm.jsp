@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="user/join/joinProc.jsp" method="post">
+	<form action="user/login/loginProc.jsp" method="post">
 		<table style="width: 1200px; text-align: center;" class="joinTable">
 			<tr>	
 				<td><input type="text" name="username" placeholder="ID" required /></td>
