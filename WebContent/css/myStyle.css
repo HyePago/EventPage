@@ -1,0 +1,74 @@
+@charset "EUC-KR";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
+
+*{
+	font-family: 'Nanum Gothic Coding', monospace;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #677e52;
+}
+input:focus {
+  outline: none;
+}
+
+/* Main */
+#mainHeader {
+	width: 1200px;
+	margin: auto;
+	margin-top: 10px;
+}
+#mainSection {
+	width: 1220px;
+	margin: auto;
+}
+
+/* Top Menu */
+.topUl {
+	list-style: none;
+	color: #677e52;
+	font-weight: bold;
+}
+.topUl li {
+	display: inline;
+	padding-right: 30px;
+}
+
+/* Join */
+.joinTable input[type="text"] {
+	width: 300px;
+	height: 35px;
+	border: 0px solid black;
+	border-bottom: 2px solid #677e52;
+	color: #677e52;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 7px;
+}
+.joinTable input[type="password"] {
+	width: 300px;
+	height: 35px;
+	border: 0px solid black;
+	border-bottom: 2px solid #677e52;
+	color: #677e52;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 7px;
+}
+.joinTable input[type="submit"] {
+	width: 150px;
+	height: 37px;
+	border: 2px solid #677e52;
+	background: white;
+	margin-top: 20px;
+	font-weight: bold;
+	color: #677e52;
+}
+.joinTable input[type="submit"]:hover {
+	background: #677e52;
+	color: white;
+}
