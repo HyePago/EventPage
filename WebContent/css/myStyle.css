@@ -15,6 +15,10 @@ a {
 input:focus {
   outline: none;
 }
+textarea:focus {
+  outline: none;
+}
+
 
 /* Main */
 #mainHeader {
@@ -97,3 +101,44 @@ input:focus {
 	resize: none;
 	line-height: 1.6em;
 }
+.eventTable label {
+	display: inline-block;
+  	padding: .4em .75em;
+	color: #677e52;
+	vertical-align: middle;
+	background-color: white;
+	border: 1px solid #677e52;
+	cursor: pointer;
+	border-radius: .25em;
+	font-size: 0.8em;
+}
+.eventTable input[type="file"] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+.eventTable input[type="date"] {
+	border: 1px solid #677e52;
+	color: #677e52;
+}
+.eventTable input[type="submit"] {
+	width: 150px;
+	height: 37px;
+	border: 2px solid #677e52;
+	background: white;
+	margin-top: 20px;
+	font-weight: bold;
+	color: #677e52;
+}
+.eventTable input[type="submit"]:hover {
+	background: #677e52;
+	color: white;
+}
+
+
+

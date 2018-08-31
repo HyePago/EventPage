@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="event/joinProc.jsp" method="post">
+	<form action="event/writeProc.jsp" method="post" enctype="multipart/form-data">
 		<table style="width: 1200px; text-align: center;" class="eventTable">
 			<tr>	
 				<td><input type="text" name="title" placeholder="제목" required /></td>
@@ -16,10 +16,13 @@
 				<td><textarea name="content" placeholder="내용"></textarea></td>
 			</tr>
 			<tr>
-				<td><input type="file" name="image"></td>
-			</tr>		
+				<td>
+					<label for="image">업로드</label>
+					<input type="file" name="image" id="image" class="upload-hidden">
+				</td>
+			</tr>	
 			<tr>
-				<td><input type="date" name="enddate"></td>
+				<td><span style="font-size: 0.9em; color: #677e52; font-weight: bold;">마감일자 | </span> <input type="date" name="enddate"></td>
 			</tr>		
 			<tr>	
 				<td><input type="submit" value="작성"></td>
