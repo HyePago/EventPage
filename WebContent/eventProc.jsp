@@ -38,7 +38,15 @@
 		mandalart.setEmail(request.getParameter("email"));
 		
 		MandalartDAO mandalartDAO = new MandalartDAO();
-		mandalartDAO.insert(mandalart);
+		
+		if(mandalartDAO.doubleCheck(mandalart.getEmail()) != -1) {
+			out.println("<script>");
+			out.println("alert('이미 참여하셨습니다!')"); // 데이터베이스 오류
+			out.println("history.back()");
+			out.println("</script>");
+		} else {
+			mandalartDAO.insert(mandalart);
+		}
 	%>
 </body>
 </html>

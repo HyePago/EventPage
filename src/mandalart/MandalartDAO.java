@@ -22,7 +22,7 @@ public class MandalartDAO {
 		}
 	}
 	
-	public int insert(Mandalart mandalart) {
+	public int insert(Mandalart mandalart) {		
 		String SQL = "INSERT INTO mandalart (firstLeftInput, firstCenterInput, firstRightInput, firstFirstInput,"
 				+ "secondLeftInput, secondCenterInput, secondRightInput, secondFirstInput,"
 				+ "thirdLeftInput, thirdCenterInput, thirdRightInput, thirdFirstInput, "
@@ -66,6 +66,21 @@ public class MandalartDAO {
 	
 	public int doubleCheck(String email) {
 		String SQL = "SELECT name FROM mandalart WHERE email = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, email);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				return 0; // Email 존재
+			} else {
+				return 1; // Email 존재 X
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 		return -1; // DB ERROR
 	}
