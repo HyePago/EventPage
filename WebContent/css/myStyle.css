@@ -140,5 +140,147 @@ textarea:focus {
 	color: white;
 }
 
+/* Event */
+.eventFirstForm {
+	position: relative;
+}
+.firstCenterInput {
+	position: relative;
+	top: -450px;
+	left: 410px;
+}
+.firstLeftInput {
+	position: relative;
+	top: -400px;
+	left: 470px;
+}
+.firstRightInput {
+	position: relative;
+	top: -400px;
+	left: 350px;
+}
+.firstFirstInput {
+	position: relative;
+	top: -590px;
+	left: 550px;
+}
 
+.centerCenterInput {
+	position: relative;
+	top: -320px;
+	left: 555px;
+}
+.centerLeftInput {
+	position: relative;
+	top: -400px;
+	left: 470px;
+}
+.centerRightInput {
+	position: relative;
+	top: -400px;
+	left: 350px;
+}
+.centerFirstInput {
+	position: relative;
+	top: -228px;
+	left: 408px;
+}
 
+.secondCenterInput {
+	position: relative;
+	top: -270px;
+	left: 590px;
+}
+.secondLeftInput {
+	position: relative;
+	top: -220px;
+	left: 650px;
+}
+.secondRightInput {
+	position: relative;
+	top: -220px;
+	left: 530px;
+}
+.secondFirstInput {
+	position: relative;
+	top: -410px;
+	left: 730px;
+}
+
+.thirdCenterInput {
+	position: relative;
+	top: -340px;
+	left: 230px;
+}
+.thirdLeftInput {
+	position: relative;
+	top: -290px;
+	left: 290px;
+}
+.thirdRightInput {
+	position: relative;
+	top: -290px;
+	left: 170px;
+}
+.thirdFirstInput {
+	position: relative;
+	top: -480px;
+	left: 370px;
+}
+
+.evnetInput {
+	height: 30px;
+	border: 0px solid black;
+	background: rgba(255,255,255,0);
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+.eventWriteForm {
+	position: relative;
+	width: 550px;
+	text-align: left;
+	margin: auto;
+	top: -230px;
+}
+.eventWriteForm th {
+	color: #677e52;
+	text-align: right;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+.eventWriteForm td {
+	padding-top: 10px;
+}
+.eventWriteForm input[type='text'] {
+	border: 0px solid black;
+	border-bottom: 2px solid #677e52;
+	height: 20px;
+	width: 73px;
+	padding-left: 5px;
+}
+.eventWriteForm input[type='email'] {
+	border: 0px solid black;
+	border-bottom: 2px solid #677e52;
+	height: 20px;
+	width: 150px;
+	padding-left: 5px;
+}
+.eventWriteForm input[type='submit'] {
+	border: 2px solid #677e52;
+	background-color: white;
+	height: 38px;
+	width: 88px;
+	padding-left: 5px;
+	margin-top: 15px;
+}
+.eventWriteForm input[type='submit']:hover {
+	background-color: #677e52;
+	color: white;
+}
+.eventWriteForm select {
+	border: 0px solid black;
+	border-bottom: 2px solid #677e52;
+	height: 20px;
+	width: 60px;
+	padding-left: 5px;
+}
