@@ -284,3 +284,29 @@ textarea:focus {
 	width: 60px;
 	padding-left: 5px;
 }
+
+.selectTable {
+	font-size: 0.8em;
+}
+.selectedbtn {
+	color: #677e52;
+	background-color: white;
+	border: 1px solid #677e52;
+	width: 50px;
+	height: 28px;
+}
+.selectedbtn:hover {
+	background-color: #677e52;
+	color: white;
+}
+.selectedbtn2 {
+	color: white;
+	background-color: #677e52;
+	border: 1px solid #677e52;
+	width: 50px;
+	height: 28px;
+}
+.selectedbtn2:hover {
+	background-color: white;
+	color: #677e52;
+}

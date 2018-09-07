@@ -27,11 +27,11 @@
 		
 		<table class="eventWriteForm">
 			<tr>
-				<th width="100px"> 이름 </th>
+				<th width="250px"> 이름 </th>
 				<td> <input type="text" name="name"> </td>
 			</tr>
 			<tr>
-				<th width="100px"> 이메일 </th>
+				<th width="250px"> 이메일 </th>
 				<td> <input type="email" name="email"> </td>
 			</tr>
 			<tr>
@@ -50,6 +50,14 @@
 			<tr style="text-align: center;">
 				<td colspan="2">
 					<input type="submit" value="제출하기">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<p><p><br><br><br><br><br>
+					<b>예시</b> <br>
+					<img src="images/ex2.png"><br>
+					<img src="images/ex1.png">
 				</td>
 			</tr>
 		</table>

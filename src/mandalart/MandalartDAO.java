@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class MandalartDAO {
 	private Connection conn;
@@ -83,5 +84,132 @@ public class MandalartDAO {
 		}
 		
 		return -1; // DB ERROR
+	}
+	
+	public int selected(int id) {
+		String SQL = "UPDATE mandalart SET selected = 1 WHERE id = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setInt(1, id);
+			
+			return pstmt.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return -2; // DATABASE ERROR
+	}
+	public int notselected(int id) {
+		String SQL = "UPDATE mandalart SET selected = 0 WHERE id = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setInt(1, id);
+			
+			return pstmt.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return -2; // DATABASE ERROR
+	}
+	
+	public ArrayList<Mandalart> getList() {
+		ArrayList<Mandalart> mandalarts = new ArrayList<>();
+		
+		String SQL = "SELECT * FROM mandalart";
+		
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Mandalart mandalart = new Mandalart();
+				mandalart.setId(rs.getInt("id"));
+				mandalart.setFirstLeftInput(rs.getString("firstLeftInput"));
+				mandalart.setFirstCenterInput(rs.getString("firstCenterInput"));
+				mandalart.setFirstRightInput(rs.getString("firstRightInput"));
+				mandalart.setFirstFirstInput(rs.getString("firstFirstInput"));
+				
+				mandalart.setSecondLeftInput(rs.getString("secondLeftInput"));
+				mandalart.setSecondCenterInput(rs.getString("secondCenterInput"));
+				mandalart.setSecondRightInput(rs.getString("secondRightInput"));
+				mandalart.setSecondFirstInput(rs.getString("secondFirstInput"));
+				
+				mandalart.setThirdLeftInput(rs.getString("thirdLeftInput"));
+				mandalart.setThirdCenterInput(rs.getString("thirdCenterInput"));
+				mandalart.setThirdRightInput(rs.getString("thirdRightInput"));
+				mandalart.setThirdFirstInput(rs.getString("thirdFirstInput"));
+				
+				mandalart.setCenterLeftInput(rs.getString("centerLeftInput"));
+				mandalart.setCenterCenterInput(rs.getString("centerCenterInput"));
+				mandalart.setCenterRightInput(rs.getString("centerRightInput"));
+				mandalart.setCenterFirstInput(rs.getString("centerFirstInput"));
+				
+				mandalart.setName(rs.getString("name"));
+				mandalart.setPhone(rs.getString("phone"));
+				mandalart.setSelected(rs.getInt("selected"));
+				mandalart.setEmail(rs.getString("email"));
+				
+				mandalarts.add(mandalart);
+			}
+			
+			return mandalarts;
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	public ArrayList<Mandalart> getWinner() {
+		ArrayList<Mandalart> mandalarts = new ArrayList<>();
+		
+		String SQL = "SELECT * FROM mandalart WHERE selected = 1";
+		
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Mandalart mandalart = new Mandalart();
+				mandalart.setId(rs.getInt("id"));
+				mandalart.setFirstLeftInput(rs.getString("firstLeftInput"));
+				mandalart.setFirstCenterInput(rs.getString("firstCenterInput"));
+				mandalart.setFirstRightInput(rs.getString("firstRightInput"));
+				mandalart.setFirstFirstInput(rs.getString("firstFirstInput"));
+				
+				mandalart.setSecondLeftInput(rs.getString("secondLeftInput"));
+				mandalart.setSecondCenterInput(rs.getString("secondCenterInput"));
+				mandalart.setSecondRightInput(rs.getString("secondRightInput"));
+				mandalart.setSecondFirstInput(rs.getString("secondFirstInput"));
+				
+				mandalart.setThirdLeftInput(rs.getString("thirdLeftInput"));
+				mandalart.setThirdCenterInput(rs.getString("thirdCenterInput"));
+				mandalart.setThirdRightInput(rs.getString("thirdRightInput"));
+				mandalart.setThirdFirstInput(rs.getString("thirdFirstInput"));
+				
+				mandalart.setCenterLeftInput(rs.getString("centerLeftInput"));
+				mandalart.setCenterCenterInput(rs.getString("centerCenterInput"));
+				mandalart.setCenterRightInput(rs.getString("centerRightInput"));
+				mandalart.setCenterFirstInput(rs.getString("centerFirstInput"));
+				
+				mandalart.setName(rs.getString("name"));
+				mandalart.setPhone(rs.getString("phone"));
+				mandalart.setSelected(rs.getInt("selected"));
+				mandalart.setEmail(rs.getString("email"));
+				
+				mandalarts.add(mandalart);
+			}
+			
+			return mandalarts;
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
 	}
 }

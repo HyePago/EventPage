@@ -1,6 +1,6 @@
+<%@page import="event.EventDAO"%>
 <%@page import="event.Event"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="event.EventDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>

@@ -15,12 +15,12 @@
 			<td>
 				<ul class="topUl">
 					<li> <a href="event.jsp">이벤트</a> </li>
-					<li> <a href="">담청자 발표</a> </li>
+					<li> <a href="winner.jsp">담청자 발표</a> </li>
 					<% 
 					if(((String)session.getAttribute("ID")) == null || ((String)session.getAttribute("ID")).equals("")) { %>
 						<li> <a href="login.jsp">로그인</a> </li>
 					<% } else { %>
-						<li> <a href="event.jsp">당첨자 뽑기</a>
+						<li> <a href="select.jsp">당첨자 뽑기</a>
 						<li> <a href="logout.jsp">로그아웃</a> </li>
 					<% } %>
 				</ul>

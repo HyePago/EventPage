@@ -24,8 +24,23 @@ public class Mandalart {
 	private String name;
 	private String phone;
 	private String email;
-
 	
+	private int selected;
+	private int id;
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getSelected() {
+		return selected;
+	}
+	public void setSelected(int selected) {
+		this.selected = selected;
+	}
 	public String getEmail() {
 		return email;
 	}
